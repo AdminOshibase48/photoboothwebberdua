@@ -67,11 +67,11 @@ const finalizePhotoStrip = () => {
   const { video, ctx, canvas } = elements;
   video.style.display = 'none';
   const frame = new Image();
-  frame.src = 'Assets/fish-photobooth/camerapage/frame.png';
+  frame.src = 'assets/camerapage/frame.png';
   frame.onload = () => {
     ctx.drawImage(frame, 0, 0, WIDTH, HEIGHT);
     localStorage.setItem('photoStrip', canvas.toDataURL('image/png'));
-    setTimeout(() => window.location.href = 'final.html', 50);
+    setTimeout(() => window.location.href = 'final', 50);
   };
   frame.complete && frame.onload();
 };
@@ -117,5 +117,5 @@ initPhotoBooth();
 // logo redirect
 document.addEventListener('DOMContentLoaded', () => {
   const logo = document.querySelector('.logo');
-  if (logo) logo.addEventListener('click', () => window.location.href = 'index.html');
+  if (logo) logo.addEventListener('click', () => window.location.href = 'index');
 });
