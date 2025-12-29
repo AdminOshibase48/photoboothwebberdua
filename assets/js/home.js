@@ -1,12 +1,12 @@
 // constants
 const BUBBLE_FRAMES = [
-  'Assets/fish-photobooth/homepage/animated-bubbles-home/bubble-1.png',
-  'Assets/fish-photobooth/homepage/animated-bubbles-home/bubble-2.png',
-  'Assets/fish-photobooth/homepage/animated-bubbles-home/bubble-3.png',
+  'assets/homepage/animated-bubbles-home/bubble-1.png',
+  'assets/homepage/animated-bubbles-home/bubble-2.png',
+  'assets/homepage/animated-bubbles-home/bubble-3.png',
 ];
 
 const PHOTOBOOTH_FRAMES = Array.from({ length: 16 }, (_, i) =>
-  `Assets/fish-photobooth/homepage/animated-photobooth-mock/${i + 1}.jpg`
+  `assets/homepage/animated-photobooth-mock/${i + 1}.jpg`
 );
 
 const PHOTOBOOTH_FRAME_INTERVAL = 200;
@@ -188,7 +188,7 @@ if (selectButton) {
 }
 
 // add more safe nav
-addSafeNavigation(selectButton, 'menu.html');
-addSafeNavigation(cameraBtn, 'camera.html');
-addSafeNavigation(uploadBtn, 'upload.html');
-addSafeNavigation(logoEl, 'index.html', 'logo');
+addSafeNavigation(selectButton, 'menu');
+addSafeNavigation(cameraBtn, 'camera');
+addSafeNavigation(uploadBtn, 'upload');
+addSafeNavigation(logoEl, 'index', 'logo');
