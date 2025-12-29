@@ -42,13 +42,13 @@ const finalizePhotoStrip = () => {
     readyBtn.disabled = false;
     downloadBtn.style.display = 'inline-block';
   };
-  frame.src = 'Assets/fish-photobooth/camerapage/frame.png';
+  frame.src = 'assets/camerapage/frame.png';
 };
 
 // ready button
 elements.readyBtn.addEventListener('click', () => {
   localStorage.setItem('photoStrip', elements.canvas.toDataURL('image/png'));
-  window.location.href = 'final.html';
+  window.location.href = 'final';
 });
 
 // download photo
@@ -81,5 +81,5 @@ elements.downloadBtn.addEventListener('click', downloadPhoto);
 // logo redirect
 document.addEventListener('DOMContentLoaded', () => {
   const logo = document.querySelector('.logo');
-  if (logo) logo.addEventListener('click', () => window.location.href = 'index.html');
+  if (logo) logo.addEventListener('click', () => window.location.href = 'index');
 });
