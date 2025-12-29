@@ -97,15 +97,15 @@ canvas.addEventListener('touchend', pointerUp);
 canvas.addEventListener('touchcancel', pointerUp);
 
 // stickers
-addFishBtn.addEventListener('click', () => addSticker('Assets/fish-photobooth/camerapage/stickers/fish.png'));
-addOctopusBtn.addEventListener('click', () => addSticker('Assets/fish-photobooth/camerapage/stickers/octopus.png'));
+addFishBtn.addEventListener('click', () => addSticker('assets/camerapage/stickers/fish.png'));
+addOctopusBtn.addEventListener('click', () => addSticker('assets/camerapage/stickers/octopus.png'));
 
-const seaweedImages = ['Assets/fish-photobooth/camerapage/stickers/seaweed1.png','Assets/fish-photobooth/camerapage/stickers/seaweed2.png'], 
-      bubbleImages = ['Assets/fish-photobooth/camerapage/stickers/bubble1.png','Assets/fish-photobooth/camerapage/stickers/bubble2.png'];
+const seaweedImages = ['assets/camerapage/stickers/seaweed1.png','assets/camerapage/stickers/seaweed2.png'], 
+      bubbleImages = ['assets/camerapage/stickers/bubble1.png','assets/camerapage/stickers/bubble2.png'];
 let seaweedIndex = 0, bubbleIndex = 0;
 
 addSeaweedBtn.addEventListener('click', () => { addSticker(seaweedImages[seaweedIndex]); seaweedIndex = (seaweedIndex + 1) % seaweedImages.length; });
-addAxBtn.addEventListener('click', () => addSticker('Assets/fish-photobooth/camerapage/stickers/axolotl.png'));
+addAxBtn.addEventListener('click', () => addSticker('assets/camerapage/stickers/axolotl.png'));
 addBubbleBtn.addEventListener('click', () => { addSticker(bubbleImages[bubbleIndex]); bubbleIndex = (bubbleIndex + 1) % bubbleImages.length; });
 
 // reset
@@ -117,10 +117,10 @@ downloadBtn.addEventListener('click', () => {
 });
 
 // home
-homeBtn.addEventListener('click', () => window.location.href = 'index.html');
+homeBtn.addEventListener('click', () => window.location.href = 'index');
 
 // logo
 document.addEventListener('DOMContentLoaded', () => {
   const logo = document.querySelector('.logo');
-  if (logo) logo.addEventListener('click', () => window.location.href = 'index.html');
+  if (logo) logo.addEventListener('click', () => window.location.href = 'index');
 });
